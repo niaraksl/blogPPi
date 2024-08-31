@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="display: flex; justify-content: center; margin-top: 2rem; ">
+    <div class="row" >
+        <!-- Blog entries-->
+        <div class="card mb-4 " style="border: none;">
+            <img class="card-img-top" src="{{ pessoa.foto.url }}" alt="..." />
+            <div class="card-body">
+                <div class="small text-muted">{{ pessoa.data_nascimento }}</div>
+                <h2 class="card-title">{{ pessoa.nome }}</h2>
+                <p class="card-text"> para entrar em contato comigo:
+                    <a href="mailto:{{ pessoa.email }}">{{ pessoa.email }}</a>    
+                </p>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
